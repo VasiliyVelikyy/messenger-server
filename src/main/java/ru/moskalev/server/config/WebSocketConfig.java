@@ -18,8 +18,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        System.out.println("🔧 [CONFIG] Регистрирую хендлер на /ws: " + chatHandler.getClass().getSimpleName());
-
         registry.addHandler(chatHandler, "/ws")
                 .setAllowedOriginPatterns("*");
     }
